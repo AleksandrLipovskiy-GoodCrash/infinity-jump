@@ -47,4 +47,10 @@ module.exports = {
       filename: 'index.html',
     }),
   ],
+  resolve: {
+    alias: {
+      assets: path.resolve(__dirname, '../src/assets/'),
+      game: path.resolve(__dirname, '../src/game/'),
+    },
+  },
 }

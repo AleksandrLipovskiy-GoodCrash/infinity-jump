@@ -8,10 +8,10 @@ module.exports = merge(common, {
   devtool: 'eval-cheap-source-map',
   devServer: {
     historyApiFallback: true,
-    contentBase: path.resolve(__dirname, './dist'),
-    open: true,
+    contentBase: path.resolve(__dirname, '../dist'),
+    open: false,
     compress: true,
-    hot: true,
+    hot: false,
     port: 8080,
   },
   plugins: [new webpack.HotModuleReplacementPlugin()],
