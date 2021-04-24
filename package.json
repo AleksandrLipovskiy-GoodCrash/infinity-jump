@@ -1,0 +1,58 @@
+{
+  "name": "infinity-jump",
+  "version": "1.1.2",
+  "description": "Game in JS and Phaser3 js",
+  "main": "src/index.js",
+  "scripts": {
+    "build": "webpack -c webpack/prod.js",
+    "start": "webpack serve -c webpack/dev.js",
+    "lint": "eslint --ext .js src/",
+    "lint:write": "eslint --ext .js src/ --fix",
+    "prettier": "prettier --write src/**/*.js test/**/*.js",
+    "test": "jest",
+    "pre-add": "npm run prettier",
+    "pre-commit": "lint-staged",
+    "prepare": "husky install"
+  },
+  "lint-staged": {
+    "*.js": [
+      "npm run lint:write",
+      "npm run test"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AleksandrLipovskiy-GoodCrash/infinity-jump.git"
+  },
+  "author": "Aleksandr Lipovskiy <GoodCrash> (https://lipovskiy.com)",
+  "license": "MIT",
+  "licenseUrl": "http://www.opensource.org/licenses/mit-license.php",
+  "devDependencies": {
+    "@babel/core": "^7.13.16",
+    "@babel/preset-env": "^7.13.15",
+    "babel-loader": "^8.2.2",
+    "clean-webpack-plugin": "^3.0.0",
+    "css-loader": "^5.2.4",
+    "eslint": "^7.25.0",
+    "eslint-plugin-jest": "^24.3.5",
+    "eslint-plugin-prettier": "^3.4.0",
+    "html-webpack-plugin": "^5.3.1",
+    "husky": "^6.0.0",
+    "imagemin-webpack-plugin": "^2.4.2",
+    "jest": "^26.6.3",
+    "lint-staged": "^10.5.4",
+    "mini-css-extract-plugin": "^1.5.0",
+    "prettier": "^2.2.1",
+    "sass": "^1.32.11",
+    "sass-loader": "^11.0.1",
+    "style-loader": "^2.0.0",
+    "terser-webpack-plugin": "^5.1.1",
+    "webpack": "^5.35.1",
+    "webpack-cli": "^4.6.0",
+    "webpack-dev-server": "^3.11.2",
+    "webpack-merge": "^5.7.3"
+  },
+  "dependencies": {
+    "phaser": "^3.54.0"
+  }
+}
